@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<title>Connect</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="./script/criaDados.js"></script>
+<script src="./script/enviaDados.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+  
+<input type="hidden" name="" class="teste" id="dado" value='[{"coor":"PROECE","nome":"Kung Fu","local":"Ginásio Moreninho","hor":{"hor1":"Seg 17:30 às 19:00<br>","hor2":"Quar 17:30 às 19:00<br>","hor3":"Sex 17:30 às 19:00"},"vagas":"15","desc":"aula pratica de Kung Fu","url":"http://cdn.portalsaofrancisco.com.br/wp-content/uploads/2016/07/kung-fu1.jpg"},{"coor":"PROECE","nome":"Judô","local":"Ginásio Moreninho","hor":{"hor1":"Seg 19:15 às 20:15<br>","hor2":"Quar 19:15 às 20:15<br>","hor3":"Sex 17:00 às 18:00"},"vagas":"10","desc":"aula pratica de judô","url":"http://www.docentroaomovimento.org.br/wp-content/uploads/2017/03/Judo-ilustracao-300x300.png"},{"coor":"Clube Carl Sagan","nome":"Cine Cosmos","local":"Casa da Ciência e Cultura de Campo Grande","data":"07/12/2017","hor":{"hor1":"Quin 18:00"},"vagas":"indefinido","desc":"Evento público e gratuito. Tera discoções no final. Haverá pipoca no dia.","url":"https://pbs.twimg.com/profile_images/914445025/logo_Clube_de_Astronomia_Carl_Sagan_UFMS.bmp"},{"coor":"FUNESP","nome":"Banho de Piscina","local":"Piscina do Parque Tarsila do Almaral","hor":{"hor1":"Sáb 14:00 às 18:00<br>","hor2":"Dom 08:00 às 12:00<br>","hor3":"Fer 08:00 às 12:00<br>"},"vagas":"indefinido","desc":"Espaço de lazer oferece banho de piscina de graça aos fins de semana na Capital.","url":"http://www.capitalnews.com.br/storage/webdisco/2017/11/28/350x220/39a889179345512e082cb4e864d676ee.jpg"},{"coor":"PROECE","nome":"Atividades Circenses","local":"Dojo da UFMS","hor":{"hor1":"Seg 7:30<br>","hor2":"Quin 7:30"},"vagas":"indefinido","desc":"Evento público e gratuito para aprendizagem de técnicas circenses.","url":"http://www.obeijo.com.br/img/cont/circo-05-728x444.png"},{"coor":"PROECE","nome":"Teatro","local":"Dojo da UFMS","hor":{"hor1":"Seg 9:30<br>","hor2":"Ter 7:30<br>","hor3":"Ter 9:30<br>","hor4":"Quar 7:30<br>","hor5":"Quar 9:30<br>","hor6":"Quin 9:30"},"vagas":"indefinido","desc":"Evento público e gratuito para aprendizagem de técnicas de teatro.","url":"https://scontent-amt2-1.cdninstagram.com/t51.2885-15/e35/20837213_268372800317017_814064884353335296_n.jpg"},{"coor":"FACOM-UFMS","nome":"V Ciclo de Palestra de Computação: Livre não é grátis","local":"Auditório 2 - FACOM-UFMS","data":"06/12/2017","hor":"18:00","vagas":"indefinido","url":"https://www.facom.ufms.br/wp-content/uploads/2017/10/cicloDePalestrasFacomOficial.jpg","desc":"Software Livre (SL) não é software grátis ou software de código aberto. É um software licenciado de forma a de obter e garantir certas liberdades para usuários, em oposição ao software proprietário. A filosofia do SL é que a utilização de computadores não deve impedir as pessoas de cooperarem umas com as outras. Apresentaremos uma introdução ao SL e ao seu movimento, bem como algumas licenças livres e como você pode utilizá-las na prática para escrever SL. Palestrante: Diego P. Rubert"}]'> 
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+      <img width="90%" height="90%" src="/opt/lampp/htdocs/code/Hackacity-Coopera/imagens/LogoEE.png">
+  </div>
+
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Início</a> 
+    <a href="oficinas.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Oficinas</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Connect</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Oficinas</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding conteudo">
+  </div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+function viewOficina(index){
+  localStorage.setItem("oficina", index);
+}
+
+</script>
+
+</body>
+</html>
